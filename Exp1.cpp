@@ -1,21 +1,21 @@
 #include <iostream>
 #include <string>
-
+using namespace std;
 class StudentData {
 private:
     int rollNo;
-    std::string name;
+    string name;
     float marks;
 
 public:
-    void inputData(int r, std::string n, float m) {
+    void inputData(int r,string n, float m) {
         rollNo = r;
         name = n;
         marks = m;
     }
 
     void printData() const {
-        std::cout << "Roll: " << rollNo
+        cout << "Roll: " << rollNo
                   << " | Name: " << name
                   << " | Marks: " << marks << "\n";
     }

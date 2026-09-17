@@ -1,0 +1,1 @@
+// write a program to crete a class for time having hh,mm,ss.create

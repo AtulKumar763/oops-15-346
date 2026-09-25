@@ -4,12 +4,12 @@ void byValue(int x) {
     x = x + 10;
 }
 
-
+// function
 void byReference(int &x) {
     x = x + 10;
 }
 
-
+// funnction 
 void byAddress(int *x) {
     *x = *x + 10;
 }

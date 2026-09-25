@@ -13,9 +13,9 @@ void callbyReference(int &x){
     cout<<"Inside call by Reference : "<<x<<endl;
 }
 int main(){
-    int a = 10;
-    int b = 10;
-    int c = 10;
+    int a = 100;
+    int b = 100;
+    int c = 100;
 
     cout << "Before function calls:" << endl;
     cout << "a = " << a << endl;

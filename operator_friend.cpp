@@ -16,12 +16,36 @@ class Complex{
     //     //return t;
     // }
     
+    // memeber function 
+    Complex operator-(){
+        return Complex(-real,-img);
+    }
+    //friend function
+
     friend Complex operator+(Complex c1,Complex c2);
     friend Complex operator+(Complex c1,int x);
     friend Complex operator+(int x,Complex c2);
+    friend Complex operator++();
+    friend Complex operator++(int x);
 
+    friend Complex operator-(Complex c2);
+
+    Complex operator++(){
+    Complex t(real,img);
+    real++;
+    img++;
+    return t;
+}
 };
-
+Complex operator++(int x){
+    Complex t(real,img);
+    real++;
+    img++;
+    return t;
+}
+Complex operator-(Complex c2){
+    return Complex(-c2.real,-c2.img);
+}
 Complex operator+(Complex c1,Complex c2){
     return Complex(c1.real + c2.real,c1.img + c2.img);
 }
@@ -32,7 +56,7 @@ Complex operator+(Complex c1,int x){
     return Complex(c1.real + x,c1.img);
 }
 int main(){
-  Complex c1{5,10},c2{10,20},c3,c4;
+  Complex c1{5,10},c2{10,20},c3,c4,c5,c6,c7;
  // c3 = c1 + c2;
   c1.show();
   c2.show();
@@ -40,6 +64,12 @@ int main(){
   c3.show();
   c4 = 5 + c2;
   c4.show();
+  c5 = ++c4;
+  c5.show();
+  c6 = c4++;
+  c6.show();
+  c7 = -c4;
+  c7.show();
 
 return 0;
 }

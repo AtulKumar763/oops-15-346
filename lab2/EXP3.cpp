@@ -6,6 +6,7 @@ using namespace std;
     salary = salary + (salary * 10/100);
     }
 //function2
+//function
     void function2(float *salary)
 {
     *salary = *salary + (*salary * 10/100);

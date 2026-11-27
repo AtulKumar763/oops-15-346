@@ -107,7 +107,13 @@ int main()
     cout << "Most Expensive Item: "<< expensive.name << endl;
     cout << "Price: " << expensive.price << endl;
     
+    // 5 point 
     applyDiscount(cart);
-    
+        cout << "\nShopping Cart After Discount";
+    displayCart(cart);
+
+    cout << "\nUpdated Total: "
+         << calculateTotal(cart) << endl;
+    // 
     return 0;
 }
